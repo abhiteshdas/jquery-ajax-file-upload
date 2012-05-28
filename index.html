@@ -1,0 +1,44 @@
+<html>
+    <head>
+        <title>Ajax file upload</title>
+        <link rel="stylesheet" type="text/css" href="style.css">
+        <script type='text/javascript' src='http://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.min.js'></script>
+        <script type="text/javascript" src="ajaxupload.3.5.js"></script>
+        <script type="text/javascript" src="ajaxuploadOnFly.js"></script>
+        <script type="text/javascript" >
+            $(document).ready(function(){
+                var options={
+                'allowedExt': "jpg|png|jpeg|gif|doc|docx|ppt|pptx|xls|xlsx|tex|pdf|txt",
+                'actionUrl': "upload-files.php",
+                'fieldName': "uploadfile",
+                'errorExt': "The supplied file format is not allowed",
+                'errorUpload': "Unable to upload file, try again",
+                'loadingText': "Loading..."
+            };
+
+            $('#upload-1').uploadOnFly(options);
+            
+            });
+            
+                          
+        </script>
+    </head>
+    <body>
+        <div>
+         <div class="upload_files" id="upload-1">
+                        <div class="upload-container" >
+                            <span class="btn-wrapper btn-success">
+                                <span class="add-files">Add files</span>
+                            </span>
+                        </div>
+                        <span class="status-msg" ></span>
+        
+                        <ul class="file-list" ></ul>
+
+                     </div> <!-- ajax upload ends -->
+        </div>             
+
+    </body>
+
+</html>
+
